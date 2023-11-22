@@ -21,4 +21,4 @@ CREATE TABLE Album (
 
     CONSTRAINT tipo_meio_fisico_CHECK 
         CHECK (meio_fisico IN ('CD', 'VINIL','DOWNLOAD'))
-)
+) on spotper_fg01
