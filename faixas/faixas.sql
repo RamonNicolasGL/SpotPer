@@ -1,7 +1,7 @@
 CREATE TABLE Faixas (
     id_faixa INT IDENTITY(1, 1) NOT NULL,
     desc_faixa VARCHAR(150) NOT NULL,
-    tipo_gravacao VARCHAR(50) NOT,
+    tipo_gravacao VARCHAR(50) NOT NULL,
     tempo_exec_faixa VARCHAR(10) NOT NULL,
     num_disco SMALLINT NULL,
     
@@ -16,7 +16,7 @@ CREATE TABLE Faixas (
         ON DELETE CASCADE,
     
     CONSTRAINT composicao_fk
-        FOREIGN KEY (composicao_fk)
+        FOREIGN KEY (id_composicao_fk)
         REFERENCES Composicao (id_composicao)
         ON DELETE NO ACTION,
 ) on spotper_fg02
