@@ -1,5 +1,5 @@
 CREATE TABLE Album (
-    id_album INT IDENTITY(1, 1) NOT NULL,
+    id_album INT NOT NULL,
     descricao VARCHAR(50) NOT NULL,
     tipo_compra VARCHAR(50) NOT NULL,
     preco_compra DECIMAL(8, 2) NOT NULL,

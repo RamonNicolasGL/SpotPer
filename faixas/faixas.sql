@@ -1,5 +1,5 @@
 CREATE TABLE Faixas (
-    id_faixa INT IDENTITY(1, 1) NOT NULL,
+    id_faixa INT NOT NULL,
     desc_faixa VARCHAR(150) NOT NULL,
     tipo_gravacao VARCHAR(50) NOT NULL,
     tempo_exec_faixa VARCHAR(10) NOT NULL,

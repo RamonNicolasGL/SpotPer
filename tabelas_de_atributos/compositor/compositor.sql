@@ -1,5 +1,5 @@
 CREATE TABLE Compositor (
-	id_compositor INT IDENTITY(1, 1)NOT NULL,
+	id_compositor NOT NULL,
 	nome VARCHAR(50) NOT NULL,
 	data_nasc DATE NOT NULL,
 	data_morte DATE,

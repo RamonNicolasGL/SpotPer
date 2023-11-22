@@ -1,5 +1,5 @@
 CREATE TABLE Periodo_musical (
-	id_periodo INT IDENTITY(1, 1) NOT NULL,
+	id_periodo INT NOT NULL,
 	descricao VARCHAR(50) NOT NULL,
 	tempo_ativ VARCHAR(50) NOT NULL,
 
