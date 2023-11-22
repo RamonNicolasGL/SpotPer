@@ -11,4 +11,4 @@ CREATE TABLE Compositor (
 		FOREIGN KEY (id_periodo_fk) 
 		REFERENCES Periodo_musical (id_periodo)
 		ON DELETE NO ACTION
-)
+) on spotper_fg01
