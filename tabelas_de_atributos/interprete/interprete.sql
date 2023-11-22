@@ -4,4 +4,4 @@ CREATE TABLE Interprete (
 	tipo varchar(50) NOT NULL
 
 	CONSTRAINT interprete_PK PRIMARY KEY (id_interprete)
-)
+) on spotper_fg01
