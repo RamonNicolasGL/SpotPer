@@ -13,4 +13,4 @@ CREATE TABLE Faixa_Compositor (
         FOREIGN KEY (id_faixa_fk) 
         REFERENCES Faixas (id_faixa)
         ON DELETE CASCADE
-)
+) ON spotper_fg01
