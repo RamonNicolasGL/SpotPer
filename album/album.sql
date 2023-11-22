@@ -17,7 +17,7 @@ CREATE TABLE Album (
         ON DELETE NO ACTION,
 
     CONSTRAINT dt_gravacao_CHECK 
-        CHECK (dt_gravacao < '2000-01-01'),
+        CHECK (dt_gravacao >= '2000-01-01'),
 
     CONSTRAINT tipo_meio_fisico_CHECK 
         CHECK (tipo_meio_fisico IN ('CD', 'VINIL','DOWNLOAD'))
