@@ -5,7 +5,7 @@ CREATE TABLE Gravadoras	(
 	endereco VARCHAR(255) NOT NULL,
 
 	CONSTRAINT gravadora_PK PRIMARY KEY (id_gravadora)
-)
+) on spotper_fg01
 
 CREATE TABLE Telefones_Gravadoras (
 	id_gravadora_fk INT NOT NULL,
@@ -15,4 +15,4 @@ CREATE TABLE Telefones_Gravadoras (
 		FOREIGN KEY (id_gravadora_fk) 
 		REFERENCES Gravadoras (id_gravadora) 
 		ON DELETE CASCADE
-)
+) on spotper_fg01
