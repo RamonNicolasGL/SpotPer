@@ -19,4 +19,4 @@ CREATE TABLE Faixas (
         FOREIGN KEY (composicao_fk)
         REFERENCES Composicao (id_composicao)
         ON DELETE NO ACTION,
-)
+) on spotper_fg01
