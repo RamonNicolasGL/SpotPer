@@ -4,4 +4,4 @@ CREATE TABLE Composicao (
 
 	CONSTRAINT composicao_PK PRIMARY KEY (id_composicao),
 	CONSTRAINT composicao_descricao_UNIQUE UNIQUE (descricao)
-)
+) on spotper_fg01
