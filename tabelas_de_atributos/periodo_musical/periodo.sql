@@ -5,4 +5,4 @@ CREATE TABLE Periodo_musical (
 
 	CONSTRAINT periodo_musical_PK PRIMARY KEY (id_periodo),
 	CONSTRAINT periodo_descricao_UNIQUE UNIQUE (descricao)
-)
+) on spotper_fg01
