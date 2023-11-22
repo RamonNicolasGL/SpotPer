@@ -20,5 +20,5 @@ CREATE TABLE Album (
         CHECK (dt_gravacao < '2000-01-01'),
 
     CONSTRAINT tipo_meio_fisico_CHECK 
-        CHECK (meio_fisico IN ('CD', 'VINIL','DOWNLOAD'))
+        CHECK (tipo_meio_fisico IN ('CD', 'VINIL','DOWNLOAD'))
 ) on spotper_fg01
