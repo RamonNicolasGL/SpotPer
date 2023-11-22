@@ -6,7 +6,7 @@ CREATE TABLE Playlist(
 
     CONSTRAINT playlist_PK PRIMARY KEY (id_playlist),
     CONSTRAINT dt_criacao_playlist_CHECK CHECK (dt_criacao > '2000-01-01')
-)
+) ON spotper_fg02
 
 
 create table Playlist_Faixas(
@@ -24,4 +24,4 @@ create table Playlist_Faixas(
 
 	CONSTRAINT dt_ultimo_play_CHECK CHECK (dt_ultimo_play > '2001-01-01'),
  
-)
+) ON spotper_fg02
