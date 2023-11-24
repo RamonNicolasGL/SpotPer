@@ -105,3 +105,25 @@ BEGIN
 		ROLLBACK TRANSACTION;
 	END;
 END;
+
+--64 faixas
+CREATE TRIGGER validacao_limite_de_faixas_64
+ON Faixas
+AFTER INSERT, UPDATE
+AS
+BEGIN
+    DECLARE @AlbumID INT;
+
+
+    SELECT @AlbumID = id_album_fk
+    FROM inserted
+ 
+    IF (SELECT COUNT(*) 
+	FROM Faixas 
+	WHERE id_album_fk = @AlbumID) > 64
+    
+    BEGIN
+        RAISERROR('Um álbum não pode ter mais de 64 faixas.', 16, 1);
+        ROLLBACK TRANSACTION;
+    END;
+END;
