@@ -32,6 +32,7 @@ BEGIN
 	BEGIN
 		RAISERROR ('Uma faixa com tipo de gravação diferente de DDD não pode ser associado com um compositor do período barroco.', 16,1);
 		ROLLBACK TRANSACTION;
+		DELETE FROM Faixas WHERE id_faixa = @faixa;  -- Deleta a faixa que não pode ser associada
 	END;
 
 	-- Se o periodo do compositor é barroco e o tipo_gravacao é DDD, mas no álbum existe alguma faixa com tipo de gravação diferente de DDD, não é permitido associar a faixa com o compositor
@@ -44,5 +45,6 @@ BEGIN
 	BEGIN
 		RAISERROR ('O álbum ao qual a faixa pertence possui faixas com tipo de gravação diferente de DDD, por tanto não é possível associá-la a um compositor do periodo barroco', 16,1);
 		ROLLBACK TRANSACTION;
+		DELETE FROM Faixas WHERE id_faixa = @faixa;  -- Deleta a faixa que não pode ser associada
 	END;
 END;
