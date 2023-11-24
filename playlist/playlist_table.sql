@@ -1,5 +1,5 @@
 CREATE TABLE Playlist(
-    id_playlist INT IDENTITY(1, 1) NOT NULL,
+    id_playlist INT NOT NULL,
 	nome VARCHAR(100) NOT NULL,
 	dt_criacao DATE DEFAULT getdate(),
 	tempo_exec_playlist varchar(10)  NOT NULL default '00:00:00',
