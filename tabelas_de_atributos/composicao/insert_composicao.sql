@@ -1,10 +1,13 @@
-INSERT INTO Composicao (descricao) VALUES ('Sinfonia');
-INSERT INTO Composicao (descricao) VALUES ('Ópera');
-INSERT INTO Composicao (descricao) VALUES ('Sonata');
-INSERT INTO Composicao (descricao) VALUES ('Concerto');
-INSERT INTO Composicao (descricao) VALUES ('Quarteto de Cordas');
-INSERT INTO Composicao (descricao) VALUES ('Música de Câmara');
-INSERT INTO Composicao (descricao) VALUES ('Balé');
-INSERT INTO Composicao (descricao) VALUES ('Música Coral');
-INSERT INTO Composicao (descricao) VALUES ('Poema Sinfônico');
-INSERT INTO Composicao (descricao) VALUES ('Rapsódia');
+INSERT INTO Composicao (id_composicao, descricao) 
+VALUES 
+    (1, 'Sinfonia'),
+    (2, 'Ópera'),
+    (3, 'Sonata'),
+    (4, 'Concerto'),
+    (5, 'Quarteto de Cordas'),
+    (6, 'Música de Câmara'),
+    (7, 'Balé'),
+    (8, 'Música Coral'),
+    (9, 'Poema Sinfônico'),
+    (10, 'Rapsódia');
+

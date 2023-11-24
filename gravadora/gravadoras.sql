@@ -1,5 +1,5 @@
 CREATE TABLE Gravadoras	(
-	id_gravadora INT IDENTITY(1, 1) NOT NULL, -- gera o codigo de forma incremental
+	id_gravadora INT NOT NULL, -- gera o codigo de forma incremental
 	nome VARCHAR(100) NOT NULL,
 	homepage VARCHAR(100) NOT NULL,
 	endereco VARCHAR(255) NOT NULL,

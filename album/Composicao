@@ -1,8 +1,0 @@
-CREATE TABLE Composicao (
-    id_composicao INT NOT NULL,
-    descricao VARCHAR(50) NOT NULL,
-
-
-    CONSTRAINT pk_composicao PRIMARY KEY (id_composicao),
-
-) on spotper_fg01
