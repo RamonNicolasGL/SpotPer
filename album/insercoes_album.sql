@@ -5,3 +5,4 @@ VALUES (2, 'Tchaikovsky: Swan Lake', 'Transferência bancária', 120.00, '2023-0
 
 
 VALUES (3, 'Beethoven: Symphony No. 9', 'Cartão', 60.00, '2023-11-21', '2023-01-01', 'CD', 1);
+VALUES (4, 'Bach: Masterpieces', 'Transferência bancária', 24.99, '2023-11-24', '1725-01-01', 'CD', 1);
