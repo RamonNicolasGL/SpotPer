@@ -8,7 +8,7 @@ CREATE TABLE Faixas (
     id_album_fk INT NOT NULL,
     id_composicao_fk INT NOT NULL,
     
-    CONSTRAINT faixa_PK PRIMARY KEY (id_faixa),
+    CONSTRAINT faixa_PK PRIMARY KEY NONCLUSTERED (id_faixa),
     
     CONSTRAINT faixa_album_FK
         FOREIGN KEY (id_album_fk)
