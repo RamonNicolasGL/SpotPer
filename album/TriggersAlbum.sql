@@ -57,15 +57,14 @@ BEGIN
 		WHERE f.tipo_gravacao NOT IN ('DDD')
 	
 	) as "a"
+    DECLARE @mensagem NVARCHAR(200);
+	SET @mensagem = 'O preço de compra não pode ser superior a três vezes a média dos álbuns com todas as faixas tipo DDD. Média = ' + CONVERT(NVARCHAR(20), @MediaPrecoCompras);
 
-    IF EXISTS (
+    IF @MediaPrecoCompras <> NULL AND EXISTS (
         SELECT 1
         FROM inserted i
         WHERE i.preco_compra > 3 * @MediaPrecoCompras
     )
-	
-	DECLARE @mensagem NVARCHAR(200);
-	SET @mensagem = 'O preço de compra não pode ser superior a três vezes a média dos álbuns com todas as faixas tipo DDD. Média = ' + CONVERT(NVARCHAR(20), @MediaPrecoCompras);
 
     BEGIN
         RAISERROR(@mensagem, 16, 1);

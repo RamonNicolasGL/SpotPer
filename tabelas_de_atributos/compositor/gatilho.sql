@@ -5,7 +5,10 @@ AS
 BEGIN
 	DECLARE @tipo_gravacao VARCHAR(3);
 	DECLARE @periodo_compositor VARCHAR(20);
+	DECLARE @faixa INT;	
 	DECLARE @album INT;
+
+	SELECT @faixa = i.id_faixa_fk from inserted i 
 
 	-- Pegar o id do album correspondente a Faixa que desejamos associar ao compositor
 	SELECT @album = f.id_album_fk 
@@ -36,7 +39,7 @@ BEGIN
 	END;
 
 	-- Se o periodo do compositor é barroco e o tipo_gravacao é DDD, mas no álbum existe alguma faixa com tipo de gravação diferente de DDD, não é permitido associar a faixa com o compositor
-	IF @periodo_compositor = 'Barroco' and @tipo_gravacao = 'DDD'  (
+	IF @periodo_compositor = 'Barroco' and @tipo_gravacao = 'DDD'  and EXISTS(
 		select 1 from Faixas f
 		WHERE
 			f.id_album_fk = @album and

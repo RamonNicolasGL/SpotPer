@@ -51,7 +51,7 @@ END;
 
 PROCEDURES
 
-–Att a tabela playlist com o tempo de exec total
+-- Att a tabela playlist com o tempo de exec total
 CREATE PROCEDURE AttTempoExecPlaylist(@id_playlist INT)
 AS
 BEGIN

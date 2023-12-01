@@ -9,12 +9,12 @@ VALUES (3, 'Ludwig van Beethoven', '1770-12-17', '1827-03-26', 'Bonn', 3);
 
 -- George Frideric Handel
 INSERT INTO Compositor (id_compositor, nome, data_nasc, data_morte, local_nasc, id_periodo_fk)
-VALUES (2, 'George Frideric Handel', '1685-02-23', '1759-04-14', 'Halle', 1);
+VALUES (4, 'George Frideric Handel', '1685-02-23', '1759-04-14', 'Halle', 1);
 
 -- Antonio Vivaldi
 INSERT INTO Compositor (id_compositor, nome, data_nasc, data_morte, local_nasc, id_periodo_fk)
-VALUES (3, 'Antonio Vivaldi', '1678-03-04', '1741-07-28', 'Venice', 1);
+VALUES (5, 'Antonio Vivaldi', '1678-03-04', '1741-07-28', 'Venice', 1);
 
 -- Henry Purcell
 INSERT INTO Compositor (id_compositor, nome, data_nasc, data_morte, local_nasc, id_periodo_fk)
-VALUES (4, 'Henry Purcell', '1659-09-10', '1695-11-21', 'London', 1);
+VALUES (6, 'Henry Purcell', '1659-09-10', '1695-11-21', 'London', 1);

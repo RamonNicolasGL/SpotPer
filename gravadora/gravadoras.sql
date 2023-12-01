@@ -9,7 +9,7 @@ CREATE TABLE Gravadoras	(
 
 CREATE TABLE Telefones_Gravadoras (
 	id_gravadora_fk INT NOT NULL,
-	num_telefone VARCHAR(15) NOT NULL
+	num_telefone VARCHAR(20) NOT NULL
 	CONSTRAINT telefones_gravadora_PK PRIMARY KEY (num_telefone),
 	CONSTRAINT telefones_gravadora_FK 
 		FOREIGN KEY (id_gravadora_fk) 

@@ -20,3 +20,13 @@ CREATE TABLE Faixas (
         REFERENCES Composicao (id_composicao)
         ON DELETE NO ACTION,
 ) on spotper_fg02
+
+
+create nonclustered index Idx_TipoComposicao on 
+Faixas(id_composicao_fk)
+with(pad_index=on, fillfactor=100) 
+
+--Primario
+create clustered index Idx_CodAlbum on 
+Faixas(id_album_fk)
+with(pad_index=on, fillfactor=100) 

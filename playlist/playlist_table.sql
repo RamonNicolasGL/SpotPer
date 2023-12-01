@@ -12,10 +12,10 @@ CREATE TABLE Playlist(
 create table Playlist_Faixas(
 	id_faixa_fk int not null,
 	id_playlist_fk int not null,
-    dt_ultimo_play date not null,
-	qntd_plays int not null,
+	dt_ultimo_play date default getdate(),
+	qntd_plays int default 1,
 
-	CONSTRAINT playlist_faixas_PK PRIMARY KEY (faixa, playlist),
+	CONSTRAINT playlist_faixas_PK PRIMARY KEY (id_faixa_fk, id_playlist_fk),
 
 	CONSTRAINT playlist_faixa_FK_playlist FOREIGN KEY (id_playlist_fk) REFERENCES Playlist(id_playlist)
 	ON DELETE CASCADE,
