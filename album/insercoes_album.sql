@@ -4,7 +4,9 @@ INSERT INTO Album (id_album, descricao, tipo_compra, preco_compra, dt_compra, dt
 VALUES (2, 'Tchaikovsky: Swan Lake', 'Transferência bancária', 120.00, '2023-01-28', '2000-08-05','VINIL', 2);
 
 INSERT INTO Album (id_album, descricao, tipo_compra, preco_compra, dt_compra, dt_gravacao, tipo_meio_fisico, id_gravadora_fk)
-VALUES (3, 'Beethoven: Symphony No. 9', 'Cartão', 60.00, '2023-11-21', '2023-01-01', 'CD', 1);
+VALUES (3, 'Beethoven: Symphony No. 9', 'Cartão', 60.00, '2023-11-21', '2023-01-01', 'DOWNLOAD', 1);
+
+update Album set tipo_meio_fisico = 'DOWNLOAD' where id_album = 3;
 INSERT INTO Album (id_album, descricao, tipo_compra, preco_compra, dt_compra, dt_gravacao, tipo_meio_fisico, id_gravadora_fk)
 VALUES (4, 'Bach: Masterpieces', 'Transferência bancária', 274.99, '2023-11-24', '2002-01-01', 'CD', 1);
 
@@ -39,4 +41,6 @@ INSERT INTO Album (id_album, descricao, tipo_compra, preco_compra, dt_compra, dt
 VALUES (14, 'Rachmaninoff: Piano Concerto No. 2', 'PayPal', 39.95, '2023-12-22', '2017-01-01', 'DOWNLOAD', 2);
 
 INSERT INTO Album (id_album, descricao, tipo_compra, preco_compra, dt_compra, dt_gravacao, tipo_meio_fisico, id_gravadora_fk)
-VALUES (4, 'Bach: Requiem', 'Transferência bancária', 274.99, '2023-11-24', '2002-01-01', 'CD', 1);
+VALUES (15, 'Stabat Mater', 'PayPal', 39.95, '2023-12-22', '2002-11-01', 'DOWNLOAD', 1);
+
+select * from album

@@ -1,6 +1,6 @@
 create table Playlist_Faixas(
-	dt_ultimo_play date not null,
-	qntd_plays int not null,
+	dt_ultimo_play date default getdate(),
+	qntd_plays int default 1,
 	
 	faixa int not null,
 	playlist int not null,

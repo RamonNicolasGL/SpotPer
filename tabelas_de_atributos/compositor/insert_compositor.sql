@@ -18,3 +18,10 @@ VALUES (5, 'Antonio Vivaldi', '1678-03-04', '1741-07-28', 'Venice', 1);
 -- Henry Purcell
 INSERT INTO Compositor (id_compositor, nome, data_nasc, data_morte, local_nasc, id_periodo_fk)
 VALUES (6, 'Henry Purcell', '1659-09-10', '1695-11-21', 'London', 1);
+
+INSERT INTO Compositor (id_compositor, nome, data_nasc, data_morte, local_nasc, id_periodo_fk)
+VALUES (8, 'Antonín Dvořák', '1841-09-08', '1904-05-01', 'Nelahozeves, Bohemia', 3);
+
+
+
+select * from Compositor

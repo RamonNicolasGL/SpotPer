@@ -1,6 +1,6 @@
 import pyodbc
 
-def conect_ao_banco(driver='SQL Server Native Client 11.0', server='DESKTOP-SKOI3FG', database='BDSpotPer', username=None, password=None, trusted_connection='yes'):
+def conect_ao_banco(driver='SQL Server Native Client 11.0', server='DESKTOP-KJGRSPA', database='BDSpotPer', username=None, password=None, trusted_connection='yes'):
 
     string_conexao = f"DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password};TRUSTED_CONNECTION={trusted_connection}"
 
@@ -244,11 +244,11 @@ def menu():
                 if subescolha == '1':
                     Consulta_A()
                 elif subescolha == '2':
-                    Consulta_A()
+                    Consulta_B()
                 elif subescolha == '3':
-                    Consulta_A()
+                    Consulta_C()
                 elif subescolha == '4':
-                    Consulta_A()
+                    Consulta_D()
                 elif subescolha == '5':
                     break
                 else:
@@ -276,12 +276,12 @@ def Consulta_A():
 
     try:
         #Colocar a consulta aqui
-        cursor.execute("SELECT id_playlist, nome FROM Playlist")
-        playlists = cursor.fetchall()
+        cursor.execute("SELECT * from preco_album_acima_media()")
+        albuns = cursor.fetchall()
 
         #Exmp de formatação pra printar linha por linha
-        for playlist in playlists:
-            print(f"{playlist.id_playlist}: {playlist.nome}")
+        for album in albuns:
+            print(f"{album.id_album}: {album.descricao}, preço: {album.preco_compra}")
     
     except Exception as e:
         print(f"Erro ao executar a consulta SQL: {str(e)}")
@@ -294,12 +294,12 @@ def Consulta_B():
 
     try:
         #Colocar a consulta aqui
-        cursor.execute("SELECT id_playlist, nome FROM Playlist")
-        playlists = cursor.fetchall()
+        cursor.execute("select * from gravadora_com_mais_playlists()")
+        gravadora = cursor.fetchall()
 
         #Exmp de formatação pra printar linha por linha
-        for playlist in playlists:
-            print(f"{playlist.id_playlist}: {playlist.nome}")
+        for gravadora in gravadora:
+            print(f"{gravadora.id_gravadora}: {gravadora.nome}, quantidade de playlists: {gravadora.countPlayslit}")
     
     except Exception as e:
         print(f"Erro ao executar a consulta SQL: {str(e)}")
@@ -312,12 +312,12 @@ def Consulta_C():
 
     try:
         #Colocar a consulta aqui
-        cursor.execute("SELECT id_playlist, nome FROM Playlist")
-        playlists = cursor.fetchall()
+        cursor.execute("select * from compositor_mais_faixas_playlist()")
+        compositores = cursor.fetchall()
 
         #Exmp de formatação pra printar linha por linha
-        for playlist in playlists:
-            print(f"{playlist.id_playlist}: {playlist.nome}")
+        for compositor in compositores:
+            print(f"{compositor.id_compositor}: {compositor.nome}, quantidade de faixas: {compositor.num_faixas}")
     
     except Exception as e:
         print(f"Erro ao executar a consulta SQL: {str(e)}")
@@ -330,7 +330,7 @@ def Consulta_D():
 
     try:
         #Colocar a consulta aqui
-        cursor.execute("SELECT id_playlist, nome FROM Playlist")
+        cursor.execute("SELECT * from faixas_barroco_concerto()")
         playlists = cursor.fetchall()
 
         #Exmp de formatação pra printar linha por linha
